@@ -14,7 +14,12 @@ Run - cargo run <br>
 # Sending a DNS Request to Revolvo
 Install Dig. <br>
 Windows - https://www.configserverfirewall.com/windows-10/dig-command-windows/ <br>
-Using Dig - dig '@127.0.0.1' -p 2053 <domain-name> <br>
+Using Dig - dig '@127.0.0.1' -p 2053 <domain-name> <br><br>
 You can use nslookup, drill or nsq. <br>
+
+# Built using
++ Rust Lang
++ Cargo - The package manager
+
 
 
