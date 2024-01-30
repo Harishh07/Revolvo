@@ -5,11 +5,11 @@ Revolvo is a compact DNS server developed in Rust.
 
 To get started with the app, follow these simple steps:
 
-Clone the repository: git clone https://github.com/Harishh07/Revolvo.git <br>
+Clone the repository: ``` git clone https://github.com/Harishh07/Revolvo.git ``` <br>
 
 # Build & Run
-Build - cargo build <br>
-Run - cargo run <br>
+Build - ``` cargo build ``` <br>
+Run - ``` cargo run ``` <br>
 <br>
 # Sending a DNS Request to Revolvo
 Install Dig. <br>
