@@ -15,7 +15,7 @@ Run - cargo run <br>
 Install Dig. <br>
 Windows - https://www.configserverfirewall.com/windows-10/dig-command-windows/ <br><br>
 
-Run - `dig '@127.0.0.1' -p 2053 <domain-name>` on a different terminal.<br><br>
+Run - ``` dig '@127.0.0.1' -p 2053 <domain-name> ``` on a different terminal.<br><br>
 You can use nslookup, drill or nsq. <br>
 
 # Built using
