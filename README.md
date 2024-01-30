@@ -21,7 +21,7 @@ You can use nslookup, drill or nsq. <br>
 # Built using
 + Rust Lang
 + Cargo - The package manager
-
+<br>
 Inspired from @EmilHernvall &hearts;
 
 
