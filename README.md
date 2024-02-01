@@ -1,5 +1,5 @@
 # Revolvo
-Revolvo is a compact DNS server developed in Rust.
+Revolvo is a compact Multi-Threaded DNS server developed in Rust.
 
 # Getting Started
 
