@@ -1,5 +1,6 @@
 use std::net::UdpSocket;
 use std::net::{Ipv4Addr, Ipv6Addr};
+use std::thread;
 
 type Error = Box<dyn std::error::Error>;
 type Result<T> = std::result::Result<T, Error>;
@@ -839,9 +840,18 @@ fn main() -> Result<()> {
     let socket = UdpSocket::bind(("0.0.0.0", 2053))?;
 
     loop {
-        match handle_query(&socket) {
-            Ok(_) => {}
-            Err(e) => eprintln!("An error occurred: {}", e),
+        match socket.try_clone() {
+            Ok(child_socket) => {
+                let handle = thread::spawn(move || {
+                    match handle_query(&child_socket) {
+                        Ok(_) => {}
+                        Err(e) => eprintln!("An error occurred: {}", e),
+                    }
+                });
+
+                handle.join().expect("The thread panicked");
+            }
+            Err(e) => eprintln!("Failed to clone socket: {}", e),
         }
     }
 }
